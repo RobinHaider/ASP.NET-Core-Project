@@ -1,0 +1,8 @@
+C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift.Utility\bin\Debug\netcoreapp3.1\Uplift.Utility.deps.json
+C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift.Utility\bin\Debug\netcoreapp3.1\Uplift.Utility.dll
+C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift.Utility\bin\Debug\netcoreapp3.1\Uplift.Utility.pdb
+C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift.Utility\obj\Debug\netcoreapp3.1\Uplift.Utility.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift.Utility\obj\Debug\netcoreapp3.1\Uplift.Utility.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift.Utility\obj\Debug\netcoreapp3.1\Uplift.Utility.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift.Utility\obj\Debug\netcoreapp3.1\Uplift.Utility.dll
+C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift.Utility\obj\Debug\netcoreapp3.1\Uplift.Utility.pdb
