@@ -139,3 +139,9 @@ C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift\obj\Debug\netcor
 C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\_ViewImports.cshtml.g.cs
 C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\_ViewStart.cshtml.g.cs
+C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift\bin\Debug\netcoreapp3.1\Uplift.DataAccess.dll
+C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift\bin\Debug\netcoreapp3.1\Uplift.Models.dll
+C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift\bin\Debug\netcoreapp3.1\Uplift.Utility.dll
+C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift\bin\Debug\netcoreapp3.1\Uplift.DataAccess.pdb
+C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift\bin\Debug\netcoreapp3.1\Uplift.Models.pdb
+C:\Users\Lenovo\source\repos\ASP.NET Core Project\Uplift\Uplift\bin\Debug\netcoreapp3.1\Uplift.Utility.pdb

@@ -7288,6 +7288,7 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 1.1.0",
       "Microsoft.EntityFrameworkCore >= 1.1.0",
+      "Microsoft.EntityFrameworkCore.Relational >= 1.1.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 1.1.0",
       "Uplift.Models >= 1.0.0",
       "Uplift.Utility >= 1.0.0"
@@ -7346,6 +7347,10 @@
             "version": "[1.1.0, )"
           },
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.Relational": {
             "target": "Package",
             "version": "[1.1.0, )"
           },
