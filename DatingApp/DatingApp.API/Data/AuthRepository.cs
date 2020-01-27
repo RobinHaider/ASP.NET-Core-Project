@@ -20,7 +20,7 @@ namespace DatingApp.API.Data
 
             if(user == null)
                 return null;
-            if(VarifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
+            if(!VarifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
                 return null;
             
             return user;
