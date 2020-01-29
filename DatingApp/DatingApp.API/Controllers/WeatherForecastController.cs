@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 
 namespace DatingApp.API.Controllers
 {
-    [Authorize]
+    
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
@@ -23,7 +23,7 @@ namespace DatingApp.API.Controllers
 
         }
 
-        [AllowAnonymous]
+        
         [HttpGet]
         public async Task<IActionResult> GetValues()
         {
