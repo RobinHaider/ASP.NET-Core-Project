@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using AutoMapper;
 using DatingApp.API.Data;
 using DatingApp.API.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -35,9 +36,11 @@ namespace DatingApp.API
         {
             services.AddDbContext<DataContext>(options => 
                     options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddControllers();
+            services.AddMvc();
             services.AddCors();
+            services.AddAutoMapper(typeof(DatingRepository).Assembly);
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IDatingRepository, DatingRepository>();
             //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             //    .AddCookie(options =>
             //    {
@@ -55,20 +58,24 @@ namespace DatingApp.API
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseExceptionHandler(builder =>
+            else
             {
-                builder.Run(async context =>
+                app.UseExceptionHandler(builder =>
                 {
-                    context.Response.StatusCode = (int) HttpStatusCode.InternalServerError;
-                    var error = context.Features.Get<IExceptionHandlerFeature>();
-                    if (error != null)
+                    builder.Run(async context =>
                     {
-                        context.Response.AddApplicationError(error.Error.Message);
-                        await context.Response.WriteAsync(error.Error.Message);
-                    }
+                        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                        var error = context.Features.Get<IExceptionHandlerFeature>();
+                        if (error != null)
+                        {
+                            context.Response.AddApplicationError(error.Error.Message);
+                            await context.Response.WriteAsync(error.Error.Message);
+                        }
+                    });
                 });
-            });
+            }
+
+            
 
             // app.UseHttpsRedirection();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
