@@ -1,12 +1,15 @@
+import { MemberListResolver } from './_resolvers/member-list.resolver';
+import { MemberDetailsResolver } from './_resolvers/member-details.resolver';
 import { MemberDetailsComponent } from './members/member-details/member-details.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { AuthService } from './_services/auth.service';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { TabsModule } from 'ngx-bootstrap/tabs'
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -24,6 +27,13 @@ import { JwtModule } from '@auth0/angular-jwt';
 
 export function getToken(){
    return localStorage.getItem('token');
+}
+
+export class CustomHammerConfig extends HammerGestureConfig  {
+   overrides = {
+       pinch: { enable: false },
+       rotate: { enable: false }
+   };
 }
 
 @NgModule({
@@ -45,6 +55,7 @@ export function getToken(){
       BsDropdownModule.forRoot(),
       BrowserAnimationsModule,
       TabsModule.forRoot(),
+      NgxGalleryModule,
       RouterModule.forRoot(appRoutes),
       JwtModule.forRoot({
          config: {
@@ -56,7 +67,10 @@ export function getToken(){
    ],
    providers: [
       AuthService,
-      ErrorInterceptorProvider
+      ErrorInterceptorProvider,
+      MemberDetailsResolver,
+      MemberListResolver,
+      { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
    ],
    bootstrap: [
       AppComponent
